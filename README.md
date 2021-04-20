@@ -3,6 +3,13 @@
 https://github.com/ElizaLo/Machine-Learning
 https://github.com/kanxu526/Online-Courses
 --------------------------------------------------------
+https://github.com/GeostatsGuy/PythonNumericalDemos
+https://github.com/Tiagoblima/ml-course-ufrpe
+https://github.com/RayneChiang/Foundation-of-ML
+https://github.com/goosen78/Coursera-Specialization___Mathematics-for-ML
+https://jdariasl.github.io/ML_2020/intro.html
+https://github.com/jdariasl/ML_2020
+https://github.com/mariamingallonMM?tab=repositories
 https://github.com/Shubhamm097/Machine-Learning--CS307
 https://github.com/yan-vei/dmml_labs
 https://github.com/Daishinkan002/Machine_Learning_Tutorials
