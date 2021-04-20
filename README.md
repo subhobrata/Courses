@@ -5,6 +5,7 @@ https://github.com/kanxu526/Online-Courses
 https://github.com/leehanchung/awesome-full-stack-machine-courses
 https://cs217.stanford.edu/
 --------------------------------------------------------
+https://github.com/student-IH-labs-and-stuff/BER-DAFT-MAR21
 https://github.com/gwib/MBML
 https://github.com/EFPF/MLExamples
 https://github.com/ajzhanghk/Stat3612
