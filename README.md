@@ -1,5 +1,17 @@
 # Github Courses
 
+https://github.com/ElizaLo/Machine-Learning
+https://github.com/kanxu526/Online-Courses
+--------------------------------------------------------
+https://github.com/Shubhamm097/Machine-Learning--CS307
+https://github.com/yan-vei/dmml_labs
+https://github.com/Daishinkan002/Machine_Learning_Tutorials
+https://github.com/VasilikiZarkadoula/Machine-Learning-Auth-2021
+https://github.com/SunnyientDev/Stepik_New_Courses
+https://github.com/Illumaria/made-advanced-machine-learning
+https://github.com/Supan14/CSE523-Machine-Learning-Interstellar-Explorers
+https://github.com/LIMr1209/machine-learn
+https://github.com/AppliedMachineLearningNBI/AppliedML2021
 https://github.com/kanxu526/Online-Courses
 https://github.com/MrTimmy89/MADE_Adv_ML_2021
 https://github.com/AndyFernandes/probabilistic-machine-learning
