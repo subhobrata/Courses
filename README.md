@@ -1,5 +1,8 @@
 # Github Courses
 
+https://github.com/kanxu526/Online-Courses
+https://github.com/MrTimmy89/MADE_Adv_ML_2021
+https://github.com/AndyFernandes/probabilistic-machine-learning
 https://github.com/rupesh-k-yadav/MACHINE-LEARNING-CS-307
 https://github.com/mrdbourke/zero-to-mastery-ml
 https://github.com/pjhartout/Introduction_to_Machine_Learning
