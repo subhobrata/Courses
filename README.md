@@ -4,7 +4,13 @@ https://github.com/ElizaLo/Machine-Learning
 https://github.com/kanxu526/Online-Courses
 https://github.com/leehanchung/awesome-full-stack-machine-courses
 https://cs217.stanford.edu/
+https://se.ewi.tudelft.nl/remla/
 --------------------------------------------------------
+https://github.com/daniel-hain/ML_course_maastricht
+https://github.com/Offliners/ML-writeup
+https://github.com/d-vet-ml4ed/mlbd
+https://github.com/NielsFuglsang/02460-advanced-machine-learning
+https://github.com/AppliedMachineLearningNBI/AppliedML2021
 https://github.com/student-IH-labs-and-stuff/BER-DAFT-MAR21
 https://github.com/gwib/MBML
 https://github.com/EFPF/MLExamples
