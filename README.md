@@ -6,6 +6,9 @@ https://github.com/leehanchung/awesome-full-stack-machine-courses
 https://cs217.stanford.edu/
 https://se.ewi.tudelft.nl/remla/
 --------------------------------------------------------
+https://numpy-ml.readthedocs.io/en/latest/
+https://github.com/ddbourgin/numpy-ml
+https://github.com/probabilisticai
 https://github.com/forrestbao/MLClass
 https://github.com/ericlav/MLforNLP_Katsoulakis_Lavergne
 https://github.com/RudyJAMartinez/Data-Foundations-Python
