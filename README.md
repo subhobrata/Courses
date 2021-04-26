@@ -6,6 +6,8 @@ https://github.com/leehanchung/awesome-full-stack-machine-courses
 https://cs217.stanford.edu/
 https://se.ewi.tudelft.nl/remla/
 --------------------------------------------------------
+https://github.com/RudyJAMartinez/Data-Foundations-Python
+https://github.com/louisfb01/start-machine-learning-in-2020
 https://github.com/daniel-hain/ML_course_maastricht
 https://github.com/Offliners/ML-writeup
 https://github.com/d-vet-ml4ed/mlbd
