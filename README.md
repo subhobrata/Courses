@@ -10,6 +10,8 @@ https://numpy-ml.readthedocs.io/en/latest/
 https://github.com/ddbourgin/numpy-ml
 https://github.com/probabilisticai
 https://github.com/forrestbao/MLClass
+https://github.com/behrman/ros
+https://github.com/bambinos/Bambi_resources/tree/master/ROS
 https://github.com/ericlav/MLforNLP_Katsoulakis_Lavergne
 https://github.com/RudyJAMartinez/Data-Foundations-Python
 https://github.com/louisfb01/start-machine-learning-in-2020
