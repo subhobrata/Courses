@@ -5,9 +5,14 @@ https://github.com/kanxu526/Online-Courses
 https://github.com/leehanchung/awesome-full-stack-machine-courses
 https://cs217.stanford.edu/
 https://se.ewi.tudelft.nl/remla/
---------------------------------------------------------
+https://github.com/vivamoto/classifier
 https://numpy-ml.readthedocs.io/en/latest/
 https://github.com/ddbourgin/numpy-ml
+--------------------------------------------------------
+https://github.com/tomdewildt/introduction-to-machine-learning
+https://github.com/davidrosenberg/ttml2021
+https://github.com/forrestbao/MLClass
+https://github.com/pedreen/dash-tcc-puc
 https://github.com/probabilisticai
 https://github.com/forrestbao/MLClass
 https://github.com/behrman/ros
