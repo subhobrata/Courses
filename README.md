@@ -8,7 +8,12 @@ https://se.ewi.tudelft.nl/remla/
 https://github.com/vivamoto/classifier
 https://numpy-ml.readthedocs.io/en/latest/
 https://github.com/ddbourgin/numpy-ml
+https://github.com/sigvehaug/CAS-Applied-Data-Science
+https://github.com/georgetown-analytics
+https://github.com/pabloinsente/math-app-ml
 --------------------------------------------------------
+https://github.com/tomstark99/COMS30050
+https://github.com/bb20417/CE888
 https://github.com/tomdewildt/introduction-to-machine-learning
 https://github.com/davidrosenberg/ttml2021
 https://github.com/forrestbao/MLClass
