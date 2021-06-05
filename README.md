@@ -12,6 +12,7 @@ https://github.com/sigvehaug/CAS-Applied-Data-Science
 https://github.com/georgetown-analytics
 https://github.com/pabloinsente/math-app-ml
 --------------------------------------------------------
+https://github.com/carnotryu?tab=repositories
 https://github.com/tomstark99/COMS30050
 https://github.com/bb20417/CE888
 https://github.com/tomdewildt/introduction-to-machine-learning
