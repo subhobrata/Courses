@@ -1,12 +1,15 @@
 # Generated media files
-*/audio/*.mp3
-*/audio/*.wav
-*/output/*.mp4
-*/output/*.mov
-*/media/
+**/audio/*.mp3
+**/audio/*.wav
+**/output/*.mp4
+**/output/*.mov
+**/output/*.pdf
+**/output/*.gif
+**/media/
+**/frames/
 
 # Manim cache
-*/__pycache__/
+**/__pycache__/
 *.pyc
 .DS_Store
 
