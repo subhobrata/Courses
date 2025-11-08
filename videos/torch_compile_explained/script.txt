@@ -1,0 +1,89 @@
+# torch.compile Explained - Complete Guide
+# Total Duration: ~5 minutes (300 seconds)
+# Voice: en-US-AndrewNeural (professional, technical)
+
+## Introduction (0-15s)
+
+PyTorch 2 introduced torch dot compile, a revolutionary way to make your deep learning code run faster with just one line of change. Today, we're going to dive deep into how it works, how to use it, and how to debug it when things go wrong.
+
+## Section 1: What is torch.compile? (15-45s)
+
+torch dot compile is PyTorch's built-in graph compiler. Here's the idea: you wrap your model or function once, and PyTorch captures your operations into computation graphs, then JIT-compiles them into optimized kernels.
+
+The default backend, called TorchInductor, generates highly optimized Triton kernels for GPUs and efficient C++ code for CPUs. The goal is simple: reduce Python overhead and fuse operations for faster execution, all with minimal code changes.
+
+## Section 2: The Compilation Pipeline (45-90s)
+
+When you call torch dot compile, a sophisticated four-stage pipeline kicks in. Let's visualize each step.
+
+First, TorchDynamo acts as the tracer. It hooks into Python's frame evaluation system and watches your bytecode during the forward pass. It extracts sequences of tensor operations into FX graphs. If it encounters Python code it can't safely trace, like print statements or control flow that depends on tensor values, it creates a graph break and falls back to eager execution for that portion.
+
+Second, for training, AOTAutograd builds the backward graph from your captured forward graph. This means your training loop doesn't change at all.
+
+Third, the lowering phase rewrites your graphs using a smaller, canonical set of operations called Core ATen or Prims. This reduces the burden on backends to support thousands of operators.
+
+Finally, TorchInductor performs fusion and scheduling, then generates optimized kernels. On GPU, it uses Triton to emit device code. On CPU, it generates efficient C++ with parallelism.
+
+## Section 3: The API and Key Parameters (90-150s)
+
+The torch dot compile API has several important knobs you need to understand.
+
+The fullgraph parameter controls whether PyTorch must capture everything as a single graph. Setting it to False, the default, allows graph breaks. Setting it to True is great for debugging, as it will error on the first break, helping you identify problems.
+
+The dynamic parameter controls dynamic shape tracing. Set it to True to build kernels that handle varying input sizes without recompiling. Set it to False to specialize kernels for specific shapes. None lets PyTorch decide automatically.
+
+The mode parameter offers performance presets. Default mode is balanced. Reduce-overhead mode uses CUDA Graphs to minimize Python overhead, perfect for small batches. Max-autotune mode profiles and tunes matrix multiplications and convolutions for maximum performance. And max-autotune-no-cudagraphs gives you the tuning without CUDA Graphs.
+
+You can also pass backend-specific options for fine-grained control over fusion, padding, and kernel generation.
+
+## Section 4: Code Examples (150-195s)
+
+Let's see torch dot compile in action.
+
+For inference, you simply wrap your model. Here's a simple MLP. After moving it to CUDA, we call torch dot compile. The first forward pass will compile, and subsequent calls run at optimized speed.
+
+For training, it's equally simple. Compile your model, then run your training loop normally. The optimizer, loss calculation, and backward pass all work seamlessly because AOTAutograd handles the backward graph automatically.
+
+For distributed training with DDP, the order matters: move your model to the device first, wrap it with DistributedDataParallel, then compile. This enables special optimizations that preserve communication and computation overlap.
+
+## Section 5: Dynamic Shapes (195-225s)
+
+Dynamic shapes deserve special attention. With dynamic equals True, PyTorch attempts to generate kernels that handle varying input sizes. However, some operations and optimizations still require shape specialization, which can cause recompiles.
+
+The trade-off is important: dynamic kernels can disable certain optimizations like CUDA Graphs and may run slower. Use dynamic shapes only when you truly need flexibility across different input sizes.
+
+You can use the TORCH_LOGS environment variable to diagnose when and why recompilation happens.
+
+## Section 6: Graph Breaks (225-260s)
+
+Graph breaks are one of the most common issues you'll encounter. A graph break occurs when Dynamo hits Python code it can't safely trace, such as print statements, calling dot item on tensors in control flow, or invoking third-party C++ extensions.
+
+Here's how to tackle them. First, use torch dot dynamo dot explain to see how many graphs were created and why breaks occurred. Setting fullgraph to True will raise an error on the first break, making problems obvious.
+
+Second, avoid data-dependent Python control flow. Instead of using if statements based on tensor values, use torch dot where or boolean masks that stay on the computation graph.
+
+Third, if a function must stay in eager mode, mark it with the torch dot compiler dot disable decorator.
+
+For debugging, you can test different stack layers: backend equals eager isolates Dynamo, aot_eager adds AOTAutograd, and inductor runs the full stack.
+
+## Section 7: Performance Optimization (260-285s)
+
+Here's your performance playbook. Start with the default: just call torch dot compile on your model and profile it against your baseline.
+
+If you're working with small batches or need low latency, try mode equals reduce-overhead. It applies CUDA Graphs when possible, though it may increase memory usage.
+
+For maximum mathematical performance, use mode equals max-autotune. It aggressively tunes operations and can deliver significant speedups on compute-heavy models.
+
+Eliminate high-impact graph breaks using the debugging tools we discussed. Each break adds overhead and reduces optimization opportunities.
+
+Keep shapes consistent in hot paths when possible. While dynamic shapes are powerful, static shapes enable better optimizations like CUDA Graphs and operation fusion.
+
+For distributed training, follow the recommended order: device, then DDP, then compile. This unlocks bucket-aware optimizations.
+
+## Conclusion (285-300s)
+
+torch dot compile is a powerful tool that can dramatically speed up your PyTorch code with minimal changes. Start simple, profile your results, use the debugging tools to eliminate graph breaks, and tune the mode and options for your specific workload.
+
+The key is understanding the compilation pipeline, knowing which parameters to adjust, and recognizing when graph breaks or dynamic shapes are impacting performance.
+
+Now you have everything you need to supercharge your PyTorch models. Happy compiling!

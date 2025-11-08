@@ -1,0 +1,15 @@
+# Generated media files
+*/audio/*.mp3
+*/audio/*.wav
+*/output/*.mp4
+*/output/*.mov
+*/media/
+
+# Manim cache
+*/__pycache__/
+*.pyc
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log
