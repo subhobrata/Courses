@@ -1,0 +1,42 @@
+# Euler's Formula - Video Script
+
+## Total Duration: ~40 seconds
+
+---
+
+## Introduction (0-4s)
+Euler's formula has been called the most beautiful equation in mathematics, and today, we're going to see why.
+
+## The Formula (4-10s)
+Here it is: e to the power of i times pi, plus one, equals zero. Five fundamental constants, all connected in one elegant expression.
+
+## Complex Plane (11-16s)
+To understand this, we need to venture into the complex plane. Here, the horizontal axis represents real numbers, and the vertical axis represents imaginary numbers.
+
+## Unit Circle (16-20s)
+And here's the unit circle. This is where the magic happens.
+
+## The Journey (20-30s)
+When we start at e to the power of i times zero, we're at the point one on the real axis. But as we increase the angle, traveling around the unit circle, we trace out a beautiful path. And when we reach an angle of pi radians, we land exactly at negative one.
+
+## The Connection (30-35s)
+So e to the power of i times pi equals negative one. Add one to both sides, and we get our famous equation: e to the power of i times pi, plus one, equals zero.
+
+## Conclusion (35-40s)
+A simple equation that connects five of the most important numbers in mathematics. That's the beauty of Euler's formula.
+
+---
+
+## Animation Timing Notes:
+- 0-4s: Title animation and introduction
+- 4-10s: Show and emphasize the formula
+- 11-16s: Create complex plane with labels
+- 16-20s: Draw the unit circle
+- 20-30s: Animate the journey from 1 to -1 around the circle
+- 30-35s: Show the algebraic transformation
+- 35-40s: Final emphasis on the complete formula
+
+## Voice Settings:
+- Voice: en-US-AndrewNeural (professional, clear)
+- Rate: +0% (normal speed)
+- Emphasis: Slight pause after "Here it is" and "That's the beauty"
